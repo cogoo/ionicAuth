@@ -14,3 +14,19 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.tangoAnimate {
+  transition: all 1s;
+  &.quick {
+    transition: all 0.5s;
+  }
+  &.slow {
+    transition: all 1.5s;
+  }
+}
+
+// tangoHelper classes
+.tangoCentre {
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
