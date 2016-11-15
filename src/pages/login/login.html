@@ -29,12 +29,6 @@
                 <ion-input [(ngModel)]="password" type="password"></ion-input>
             </ion-item>
         </ion-list>
-        <button *ngIf="!showSpinner" ion-button full round color="danger" [disabled]="isInvalid()" (click)="authUser(false)">
-            Sign In
-        </button>
-        <button *ngIf="showSpinner" ion-button full round color="danger" class="tangoAnimate quick tangoCentre" [ngClass]="setClass()">
-            <ion-spinner color="light" *ngIf="hideSpinner"></ion-spinner>
-        </button>
     </section>
     <section *ngIf="segment == 'signUp'">
         <ion-list>
@@ -55,11 +49,9 @@
                 <ion-input [(ngModel)]="password" type="password"></ion-input>
             </ion-item>
         </ion-list>
-        <button *ngIf="!showSpinner" ion-button full round color="danger" [disabled]="isInvalidSignUp()" (click)="authUser(true)">
-            Sign Up
-        </button>
-        <button *ngIf="showSpinner" ion-button full round color="danger" class="tangoAnimate quick tangoCentre" [ngClass]="setClass()">
-            <ion-spinner color="light" *ngIf="hideSpinner"></ion-spinner>
-        </button>
     </section>
+    <button ion-button full round color="danger" class="tangoAnimate quick tangoCentre" [disabled]="isInvalid()" (click)="authUser(false)" [ngClass]="setClass()">
+            <span *ngIf="!showSpinner" >Sign In</span>
+            <ion-spinner [color]="spinnerColor" *ngIf="showSpinner"></ion-spinner>
+        </button>
 </ion-content>

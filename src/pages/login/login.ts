@@ -17,10 +17,12 @@ export class LoginPage {
   round: boolean;
   expand: boolean;
   showSpinner: boolean;
-  hideSpinner: boolean;
+  spinnerColor: string;
 
   constructor(public navCtrl: NavController, public auth: Auth, public user: User, public alertCtrl: AlertController) {
     this.segment = "signIn";
+    this.showSpinner = false;
+    this.spinnerColor = 'light';
     if (this.auth.isAuthenticated()) {
       this.navCtrl.setRoot(HomePage);
     }
@@ -87,6 +89,7 @@ export class LoginPage {
             }
           }
           this.showSpinner = false;
+          this.round = false;
         })
     } else {
    
@@ -94,7 +97,7 @@ export class LoginPage {
       let details = { 'email': this.email, 'password': this.password }
       this.auth.login('basic', details)
         .then((auth) => {
-            this.hideSpinner = false;
+            this.spinnerColor = 'danger';
             this.expand = true;
             setTimeout(() => {
 
@@ -110,6 +113,7 @@ export class LoginPage {
               alert.present();
 
           this.showSpinner = false;
+          this.round = false;
         });
     }
 
