@@ -103,7 +103,7 @@ export class LoginPage {
 
   signUpSuccess(login) {
 
-    this.authUser(this.segment);
+    this.authUser('signIn');
   }
 
   signUpError(err: IDetailedError<string[]>) {
