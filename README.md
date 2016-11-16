@@ -23,10 +23,8 @@ Simple authentication starter using Ionic Auth
 ## Getting Started
 
 
-Clone the repository from [GitHub](https://github.com/cogoo/ionicAuth.git)
+Clone the repository 
 
-### Via HTTPS
-> git clone https://github.com/cogoo/ionicAuth.git
 
 ### Install Node Packages
 
