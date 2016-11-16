@@ -63,10 +63,10 @@ export class LoginPage {
     return classes;
   }
 
-  authUser(signUp: boolean) {
+  authUser(type: string) {
     this.round = true;
     this.showSpinner = true;
-    if (signUp) {
+    if (type == 'signUp') {
       let details: UserDetails = { 'email': this.email, 'password': this.password, 'name': this.fName + ' ' + this.lName };
       this.auth.signup(details)
         .then(this.signUpSuccess.bind(this), this.signUpError.bind(this));
@@ -79,6 +79,7 @@ export class LoginPage {
   }
 
   authSuccess() {
+    debugger;
     this.spinnerColor = 'danger';
     this.expand = true;
     setTimeout(() => {
@@ -103,7 +104,7 @@ export class LoginPage {
 
   signUpSuccess(login) {
 
-    this.authUser(false);
+    this.authUser(this.segment);
   }
 
   signUpError(err: IDetailedError<string[]>) {

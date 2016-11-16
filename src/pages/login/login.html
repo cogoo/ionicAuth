@@ -50,7 +50,7 @@
             </ion-item>
         </ion-list>
     </section>
-    <button ion-button full round color="danger" class="tangoAnimate quick tangoCentre" [disabled]="isInvalid()" (click)="authUser(false)" [ngClass]="setClass()">
+    <button ion-button full round color="danger" class="tangoAnimate quick tangoCentre" [disabled]="isInvalid()" (click)="authUser(segment)" [ngClass]="setClass()">
             <span *ngIf="!showSpinner" >Sign In</span>
             <ion-spinner [color]="spinnerColor" *ngIf="showSpinner"></ion-spinner>
         </button>
