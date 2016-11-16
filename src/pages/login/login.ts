@@ -79,7 +79,6 @@ export class LoginPage {
   }
 
   authSuccess() {
-    debugger;
     this.spinnerColor = 'danger';
     this.expand = true;
     setTimeout(() => {
