@@ -6,6 +6,10 @@ Simple authentication starter using Ionic Auth
 
  1. Sign In and Sign Up with Email and Password
  2. Log Out
+ 
+ ## ionic View
+ 
+ > 19e42175
 
 ----------
 ### Prerequisites
